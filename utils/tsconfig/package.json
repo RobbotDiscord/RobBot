@@ -1,13 +1,13 @@
 {
-  "name": "gateway",
+  "name": "tsconfig",
   "private": true,
   "version": "1.0.0",
-  "main": "index.ts",
-  "scripts": {},
   "author": "robigan",
   "license": "GPLv3",
+  "files": [
+    "baseconfig.json"
+  ],
   "devDependencies": {
-    "typescript": "^4.5.4",
-    "tsconfig": "*"
+    "@tsconfig/node16": "^1.0.2"
   }
 }

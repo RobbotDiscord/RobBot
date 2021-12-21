@@ -1,5 +1,6 @@
 {
   "name": "robbot",
+  "private": true,
   "version": "2.0.0",
   "description": "RobBot, a microservice based full stack discord bot utilizing technologies like Redis, MongoDB and RabbitMQ",
   "scripts": {},
@@ -7,7 +8,8 @@
   "license": "GPLv3",
   "workspaces": [
     "instances/*",
-    "packages/*"
+    "packages/*",
+    "utils/tsconfig"
   ],
   "devDependencies": {
     "turbo": "^1.0.19"
@@ -16,10 +18,14 @@
     "baseBranch": "origin/main",
     "pipeline": {
       "build": {
-        "dependsOn": ["^build"]
+        "dependsOn": [
+          "^build"
+        ]
       },
       "test": {
-        "dependsOn": ["build"]
+        "dependsOn": [
+          "build"
+        ]
       },
       "lint": {}
     }
