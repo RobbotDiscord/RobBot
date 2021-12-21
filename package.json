@@ -1,0 +1,27 @@
+{
+  "name": "robbot",
+  "version": "2.0.0",
+  "description": "RobBot, a microservice based full stack discord bot utilizing technologies like Redis, MongoDB and RabbitMQ",
+  "scripts": {},
+  "author": "robigan",
+  "license": "GPLv3",
+  "workspaces": [
+    "instances/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.0.19"
+  },
+  "turbo": {
+    "baseBranch": "origin/main",
+    "pipeline": {
+      "build": {
+        "dependsOn": ["^build"]
+      },
+      "test": {
+        "dependsOn": ["build"]
+      },
+      "lint": {}
+    }
+  }
+}
