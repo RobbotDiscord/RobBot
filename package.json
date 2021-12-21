@@ -9,7 +9,7 @@
   "workspaces": [
     "instances/*",
     "packages/*",
-    "utils/tsconfig"
+    "utils/*"
   ],
   "devDependencies": {
     "turbo": "^1.0.19"
