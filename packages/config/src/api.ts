@@ -3,6 +3,7 @@ import { Driver, Scope, DriverReadyError } from "./others";
 class Config {
     private scope: Scope;
     protected driver: Driver;
+    public data: Record<string, unknown> = {};
 
     constructor(scope: Scope, driver: Driver) {
         this.scope = scope;
@@ -15,12 +16,12 @@ class Config {
         }
     }
 
-    async getConfig(key: string) {
+    public async getConfig(key: string) {
         this.driverReady();
         return await this.driver.getConfig(key);
     }
 
-    async initialize() {
+    public async initialize() {
         await this.driver.initialize(this.scope);
     }
 }
