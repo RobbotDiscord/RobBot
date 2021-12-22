@@ -4,7 +4,9 @@
     "compilerOptions": {
         "forceConsistentCasingInFileNames": true,
         "noUnusedLocals": true,
-        "noUnusedParameters": true
+        "noUnusedParameters": true,
+        "module": "ESNext",
+        "moduleResolution": "node"
     },
     "display": "Base"
 }

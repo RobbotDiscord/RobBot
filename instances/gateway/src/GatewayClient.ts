@@ -47,4 +47,10 @@
 //     }
 // };
 
-const { Client } = require("cloudstorm");
+import { Client } from "cloudstorm"
+
+class GatewayClient extends Client {
+    constructor() {
+        super()
+    }
+}

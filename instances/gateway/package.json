@@ -2,12 +2,13 @@
   "name": "gateway",
   "private": true,
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "src/GatewayClient.js",
   "scripts": {
     "build": "tsc"
   },
   "author": "robigan",
   "license": "GPLv3",
+  "type": "module",
   "devDependencies": {
     "tsconfig": "*",
     "typescript": "^4.5.4"

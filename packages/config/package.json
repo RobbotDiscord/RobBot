@@ -3,7 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "main": "index.ts",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc"
+  },
   "author": "robigan",
-  "license": "GPLv3"
+  "license": "GPLv3",
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "tsconfig": "*"
+  }
 }
