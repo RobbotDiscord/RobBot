@@ -4,11 +4,17 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint src/**/*.ts"
   },
   "author": "robigan",
   "license": "GPLv3",
+  "type": "module",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "eslint": "^8.5.0",
+    "eslint-config-robbot": "*",
     "tsconfig": "*",
     "typescript": "^4.5.4"
   },

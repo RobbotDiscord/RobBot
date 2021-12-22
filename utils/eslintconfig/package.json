@@ -1,0 +1,15 @@
+{
+  "name": "eslint-config-robbot",
+  "private": true,
+  "version": "1.0.0",
+  "author": "robigan",
+  "main": "./index.js",
+  "license": "GPLv3",
+  "type": "commonjs",
+  "files": [
+    "eslintbase.js"
+  ],
+  "peerDependencies": {
+    "eslint": "^8.5.0"
+  }
+}
