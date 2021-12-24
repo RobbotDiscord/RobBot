@@ -17,12 +17,8 @@ class DotenvConfigEngine extends BaseConfigEngine {
         this.ready = true;
     }
 
-    public async getConfig(key?: string): Promise<unknown> {
-        if (key === undefined) {
-            return this.data;
-        } else {
-            return this.data[key];
-        }
+    public async getConfig(key: string): Promise<unknown> {
+        return this.data[key];
     }
 
     public async refreshConfig(): Promise<ConfigData> {

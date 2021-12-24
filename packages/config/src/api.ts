@@ -16,7 +16,7 @@ class ConfigClient {
         }
     }
 
-    public async getConfig(key?: string) {
+    public async getConfig(key: string) {
         this.driverReady();
         return await this.driver.getConfig(key);
     }
