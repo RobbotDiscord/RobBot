@@ -7,7 +7,8 @@ interface Driver extends BaseConfigEngine {}
 type Promisifiable<T> = T | Promise<T>;
 
 interface ConfigData {
-    [key: string]: string;
+    token?: string | undefined;
+    [key: string]: string | undefined;
 }
 
 type ConfigDataKey = keyof ConfigData;

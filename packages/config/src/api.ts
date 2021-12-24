@@ -18,12 +18,15 @@ class ConfigClient {
 
     public async getConfig(key: ConfigDataKey) {
         this.driverReady();
-        return await this.driver.getConfig(key);
+        const result = await this.driver.getConfig(key);
+        this.data[key] = result;
+        return result;
     }
 
     public async refreshConfig() {
         this.driverReady();
-        await this.driver.refreshConfig();
+        const result = this.driver.refreshConfig();
+        this.data = await result;
     }
 
     public async initialize() {
