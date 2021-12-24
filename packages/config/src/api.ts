@@ -1,9 +1,9 @@
-import { Driver, Scope, DriverReadyError } from "./others";
+import { Driver, Scope, DriverReadyError, ConfigData, ConfigDataKey } from "./others";
 
 class ConfigClient {
     private scope: Scope;
     protected driver: Driver;
-    public data: Record<string, unknown> = {};
+    public data: ConfigData = {};
 
     constructor(scope: Scope, driver: Driver) {
         this.scope = scope;
@@ -16,7 +16,7 @@ class ConfigClient {
         }
     }
 
-    public async getConfig(key: string) {
+    public async getConfig(key: ConfigDataKey) {
         this.driverReady();
         return await this.driver.getConfig(key);
     }

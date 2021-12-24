@@ -10,6 +10,8 @@ interface ConfigData {
     [key: string]: string;
 }
 
+type ConfigDataKey = keyof ConfigData;
+
 class DriverReadyError extends Error {
     constructor(driver: Driver, message = "") {
         // eslint-disable-next-line no-extra-boolean-cast
@@ -18,4 +20,4 @@ class DriverReadyError extends Error {
     }
 }
 
-export { Scope, Driver, DriverReadyError, Promisifiable, ConfigData };
+export { Scope, Driver, DriverReadyError, Promisifiable, ConfigData, ConfigDataKey };

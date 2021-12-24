@@ -1,6 +1,6 @@
 import { BaseConfigEngine } from "./baseConfigEngine";
 import { parse } from "dotenv";
-import { ConfigData } from "../others";
+import { ConfigData, ConfigDataKey } from "../others";
 
 class DotenvConfigEngine extends BaseConfigEngine {
     public ready = false;
@@ -17,7 +17,7 @@ class DotenvConfigEngine extends BaseConfigEngine {
         this.ready = true;
     }
 
-    public async getConfig(key: string): Promise<unknown> {
+    public async getConfig(key: ConfigDataKey): Promise<ConfigData[ConfigDataKey]> {
         return this.data[key];
     }
 
