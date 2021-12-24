@@ -1,6 +1,6 @@
 import { Driver, Scope, DriverReadyError } from "./others";
 
-class Config {
+class ConfigClient {
     private scope: Scope;
     protected driver: Driver;
     public data: Record<string, unknown> = {};
@@ -32,4 +32,4 @@ class Config {
 }
 
 
-export { Config };
+export { ConfigClient };

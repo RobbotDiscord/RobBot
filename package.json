@@ -24,14 +24,18 @@
       "build": {
         "dependsOn": [
           "^build"
-        ]
+        ],
+        "outputs": ["dist/**"]
       },
       "test": {
         "dependsOn": [
           "build"
-        ]
+        ],
+        "outputs": []
       },
-      "lint": {}
+      "lint": {
+        "outputs": []
+      }
     }
   }
 }

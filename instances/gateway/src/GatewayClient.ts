@@ -47,10 +47,10 @@
 //     }
 // };
 
-import { Client } from "cloudstorm"
+import { Client } from "cloudstorm";
 
 class GatewayClient extends Client {
-    constructor() {
+    constructor(configClient: typeof import("config")) {
         super()
     }
 }
