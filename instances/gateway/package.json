@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "cloudstorm": "^0.3.2",
-    "config": "*"
+    "config": "*",
+    "rhea-promise": "^2.1.0"
   }
 }

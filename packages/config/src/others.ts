@@ -1,5 +1,6 @@
 import { BaseConfigEngine } from "./structures/baseConfigEngine";
 import { IClientOptions } from "cloudstorm/dist/Types";
+import { ConnectionOptions } from "rhea-promise";
 
 type Scope = "gateway" | "executor" | "cache" | "manager";
 
@@ -10,12 +11,13 @@ type Promisifiable<T> = T | Promise<T>;
 interface ConfigDataCommon {
     token: string
 }
-
 interface ConfigDataGateway extends IClientOptions {}
+interface ConfigDataAMQP extends ConnectionOptions {}
 
 interface ConfigData {
     common?: ConfigDataCommon;
     gateway?: ConfigDataGateway;
+    amqp?: ConfigDataAMQP
 }
 
 class DriverReadyError extends Error {

@@ -1,0 +1,12 @@
+{
+  "name": "amqp-wrapper",
+  "private": "true",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {},
+  "author": "robigan",
+  "license": "GPLv3",
+  "dependencies": {
+    "rhea-promise": "^2.1.0"
+  }
+}

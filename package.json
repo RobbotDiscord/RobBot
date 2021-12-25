@@ -8,6 +8,10 @@
     "lint": "turbo run line",
     "test": "turbo run test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobbotDiscord/RobBot.git"
+  },
   "author": "robigan",
   "license": "GPLv3",
   "workspaces": [
@@ -18,6 +22,10 @@
   "devDependencies": {
     "turbo": "^1.0.19"
   },
+  "bugs": {
+    "url": "https://github.com/RobbotDiscord/RobBot/issues"
+  },
+  "homepage": "https://github.com/RobbotDiscord/RobBot#readme",
   "turbo": {
     "baseBranch": "origin/main",
     "pipeline": {
