@@ -1,56 +1,27 @@
-// /**
-//  * GatewayClient, the entrypoint for initiating a gateway client
-//  * @module gateway/client
-//  */
-
-// const CloudStorm = require("cloudstorm");
-
-// module.exports = class GatewayClient extends CloudStorm {
-//     /**
-//      * Initiate the gateway service for RobBot
-//      * @constructor
-//      * @param {object} Config
-//      * @param {import("../../amqp/AmqpClient")} AmqpClient
-//      */
-//     constructor(Config, AmqpClient) {
-//         super(Config.token, Config.CloudStorm);
-//         this.Config = Config;
-//         this.Interface = this.Config.amqp.queueGatewayCache;
-//         this.AmqpClient = AmqpClient;
-
-//         super.on("error", console.error);
-
-//         this.Config.debug.gateway ? super.on("debug", console.warn) : undefined;
-
-//         super.once("ready", async () => {
-//             console.log("Gateway : Logged in!");
-//         });
-//     }
-
-//     /**
-//      * Start function
-//      * @async
-//      * @function
-//      */
-//     async start() {
-//         this.Channel = await this.AmqpClient.initQueue(this.Interface);
-//         //this.Channel.sendToQueue(this.Interface, Buffer.from("Hello World"));
-//         super.connect();
-
-//         super.on("event", async (event) => {
-//             this.Channel.sendToQueue(this.Interface, Buffer.from(JSON.stringify(Object.assign(event, {
-//                 "stats": {
-//                     "gatewayPID": process.pid
-//                 }
-//             }))));
-//         });
-//     }
-// };
-
 import { Client } from "cloudstorm";
+import { ConfigClient, DotenvConfigEngine } from "config";
 
 class GatewayClient extends Client {
-    constructor(configClient: typeof import("config")) {
-        super()
+    constructor(configClient: ConfigClient) {
+        configClient.initialize("gateway");
+        if (configClient.data["common"]?.token === undefined) {
+            throw new Error("Token hasn't been defined");
+        }
+
+        super(configClient.data["common"].token, configClient.data.gateway);
+
+        super.on("error", console.error);
+    }
+
+    public async start() {
+        super.on("event", async (event) => {
+            console.log(event);
+        });
     }
 }
+
+const dotenvConfigEngine = new DotenvConfigEngine("/etc/robbot.env");
+const configClient = new ConfigClient(dotenvConfigEngine);
+const gatewayClient = new GatewayClient(configClient);
+
+gatewayClient.start();

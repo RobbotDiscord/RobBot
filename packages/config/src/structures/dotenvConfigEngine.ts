@@ -1,28 +1,32 @@
 import { BaseConfigEngine } from "./baseConfigEngine";
 import { parse } from "dotenv";
-import { ConfigData, ConfigDataKey } from "../others";
+import { ConfigData } from "../others";
+import { readFileSync } from "node:fs";
+import { PathLike } from "node:fs";
 
 class DotenvConfigEngine extends BaseConfigEngine {
     public ready = false;
-    private buffer: Buffer;
+    private watchPath: PathLike;
     private data: ConfigData = {};
 
-    constructor(buffer: Buffer) {
+    constructor(path: PathLike) {
         super();
-        this.buffer = buffer;
+        this.watchPath = path;
     }
 
-    public async initialize(): Promise<void> {
-        this.data = parse(this.buffer);
+    public initialize(): void {
+        const result = readFileSync(this.watchPath, {
+            flag: "r"
+        });
+        this.data = parse(result);
         this.ready = true;
     }
 
-    public async getConfig(key: ConfigDataKey): Promise<ConfigData[ConfigDataKey]> {
-        return this.data[key];
-    }
-
     public async refreshConfig(): Promise<ConfigData> {
-        this.data = parse(this.buffer);
+        const result = readFileSync(this.watchPath, {
+            flag: "r"
+        });
+        this.data = parse(result);
         return this.data;
     }
 }

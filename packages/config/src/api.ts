@@ -1,12 +1,10 @@
-import { Driver, Scope, DriverReadyError, ConfigData, ConfigDataKey } from "./others";
+import { Driver, Scope, DriverReadyError, ConfigData, ConfigClientInitError } from "./others";
 
 class ConfigClient {
-    private scope: Scope;
     protected driver: Driver;
     public data: ConfigData = {};
 
-    constructor(scope: Scope, driver: Driver) {
-        this.scope = scope;
+    constructor(driver: Driver) {
         this.driver = driver;
     }
 
@@ -16,21 +14,18 @@ class ConfigClient {
         }
     }
 
-    public async getConfig(key: ConfigDataKey) {
-        this.driverReady();
-        const result = await this.driver.getConfig(key);
-        this.data[key] = result;
-        return result;
-    }
-
     public async refreshConfig() {
         this.driverReady();
         const result = this.driver.refreshConfig();
         this.data = await result;
     }
 
-    public async initialize() {
-        await this.driver.initialize(this.scope);
+    public initialize(scope: Scope) {
+        try {
+            this.driver.initialize(scope);
+        } catch (error) {
+            throw new ConfigClientInitError(this.driver, (error as Error).message ?? undefined);
+        }
     }
 }
 

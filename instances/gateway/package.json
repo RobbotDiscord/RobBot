@@ -2,7 +2,7 @@
   "name": "gateway",
   "private": true,
   "version": "1.0.0",
-  "main": "src/GatewayClient.js",
+  "main": "dist/GatewayClient.js",
   "scripts": {
     "build": "tsc"
   },
