@@ -1,5 +1,5 @@
 import { BaseConfigEngine } from "./structures/baseConfigEngine";
-import { Scope, ConfigData, Driver, DriverReadyError, Promisifiable } from "./others";
+import { Scope, ConfigData, Driver } from "./others";
 import { DotenvConfigEngine } from "./structures/dotenvConfigEngine";
 import { ConfigClient } from "./api";
 
@@ -8,8 +8,6 @@ export {
     Scope,
     ConfigData,
     Driver,
-    DriverReadyError,
-    Promisifiable,
     DotenvConfigEngine,
     ConfigClient
 };

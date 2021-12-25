@@ -27,10 +27,20 @@ module.exports = {
             "error",
             "always"
         ],
+        "eqeqeq": "error",
         "@typescript-eslint/no-empty-interface": [
             "error",
             {
                 "allowSingleExtends": true
+            }
+        ],
+        "@typescript-eslint/explicit-member-accessibility": [
+            "error",
+            {
+                "accessibility": "explicit",
+                "overrides": {
+                    "constructors": "no-public",
+                }
             }
         ]
     },
