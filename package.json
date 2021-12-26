@@ -5,7 +5,7 @@
   "description": "RobBot, a microservice based full stack discord bot utilizing technologies like Redis, MongoDB and RabbitMQ",
   "scripts": {
     "build": "turbo run build",
-    "lint": "turbo run line",
+    "lint": "turbo run lint",
     "test": "turbo run test"
   },
   "repository": {
@@ -20,7 +20,7 @@
     "utils/*"
   ],
   "devDependencies": {
-    "turbo": "^1.0.19"
+    "turbo": "^1.0.23"
   },
   "bugs": {
     "url": "https://github.com/RobbotDiscord/RobBot/issues"
