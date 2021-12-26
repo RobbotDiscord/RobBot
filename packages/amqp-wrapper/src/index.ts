@@ -1,12 +1,12 @@
 import { ConfigClient } from "config";
-import { Connection, Sender, SenderOptions } from "rhea-promise";
+import { Connection, Receiver, ReceiverOptions, Sender, SenderOptions } from "rhea-promise";
 
 class AmqpWrapper extends Connection {
-    private configClient: ConfigClient;
+    // private configClient: ConfigClient;
 
     constructor(configClient: ConfigClient) {
         super(configClient.data.amqp);
-        this.configClient = configClient;
+        // this.configClient = configClient;
     }
 
     public async start() {
@@ -14,9 +14,15 @@ class AmqpWrapper extends Connection {
     }
 
     public async initSender(senderOptions: SenderOptions) {
-        const sender: Sender = await super.createSender(senderOptions);
+        const sender: Promise<Sender> = super.createSender(senderOptions);
 
-        return sender;
+        return await sender;
+    }
+
+    public async initReceiver(receiverOptions: ReceiverOptions) {
+        const receiver: Promise<Receiver> = super.createReceiver(receiverOptions);
+
+        return await receiver;
     }
 }
 
