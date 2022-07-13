@@ -1,5 +1,5 @@
 import { Client } from "cloudstorm";
-import { ConfigClient, DotenvConfigEngine } from "config-robbot";
+import { ConfigClient, DotenvConfigEngine } from "config-rb";
 import { AmqpWrapperConnection } from "amqp-wrapper";
 import debugModule from "debug";
 

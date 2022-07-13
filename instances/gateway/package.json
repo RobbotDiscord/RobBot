@@ -14,14 +14,14 @@
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
     "eslint": "^8.5.0",
-    "eslint-config-robbot": "*",
-    "tsconfig": "*",
+    "eslint-config-rb": "*",
+    "tsconfig-rb": "*",
     "typescript": "^4.5.4"
   },
   "dependencies": {
     "amqp-wrapper": "*",
     "cloudstorm": "^0.3.2",
-    "config-robbot": "*",
+    "config-rb": "*",
     "debug": "^4.3.3",
     "rhea-promise": "^2.1.0"
   }
