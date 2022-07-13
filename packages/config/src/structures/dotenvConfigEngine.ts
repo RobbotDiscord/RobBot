@@ -1,8 +1,7 @@
 import { BaseConfigEngine } from "./baseConfigEngine";
 import { parse } from "dotenv";
 import { ConfigData } from "../others";
-import { readFileSync } from "node:fs";
-import { PathLike } from "node:fs";
+import { readFileSync, PathLike } from "node:fs";
 
 class DotenvConfigEngine extends BaseConfigEngine {
     public ready = false;
