@@ -12,16 +12,16 @@
   "license": "GPLv3",
   "type": "module",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.8.0",
-    "@typescript-eslint/parser": "^5.8.0",
-    "cloudstorm": "^0.3.2",
-    "eslint": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "cloudstorm": "^0.5.4",
+    "eslint": "^8.19.0",
     "eslint-config-rb": "*",
     "tsconfig-rb": "*",
-    "typescript": "^4.5.4"
+    "typescript": "^4.7.4"
   },
   "dependencies": {
-    "dotenv": "^10.0.0",
+    "dotenv": "^16.0.1",
     "rhea-promise": "^2.1.0"
   }
 }

@@ -21,7 +21,7 @@
     "utils/*"
   ],
   "devDependencies": {
-    "turbo": "^1.0.23"
+    "turbo": "^1.3.1"
   },
   "bugs": {
     "url": "https://github.com/RobbotDiscord/RobBot/issues"

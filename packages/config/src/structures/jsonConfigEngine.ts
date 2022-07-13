@@ -4,15 +4,17 @@ import { PathLike, readFileSync } from "node:fs";
 
 class JSONConfigEngine extends BaseConfigEngine {
     public ready = false;
-    private watchPath: PathLike;
+    private watchPath: string;
     private data: ConfigData = {};
 
-    constructor(path: PathLike) {
+    constructor(path: string) {
         super();
         this.watchPath = path;
     }
 
     public initialize(scope?: Scope): void {
-        const json = import(this.watchPath, { assert: { type: "json" }})
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        const json = import(this.watchPath, { assert: { type: "json" }});
     }
 }
