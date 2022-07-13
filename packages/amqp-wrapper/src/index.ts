@@ -1,4 +1,4 @@
-import { ConfigClient } from "config";
+import { ConfigClient } from "config-robbot";
 import { Connection, ReceiverOptions, SenderOptions, ConnectionEvents, SenderEvents, ReceiverEvents } from "rhea-promise";
 import debugModule from "debug";
 

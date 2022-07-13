@@ -2,11 +2,12 @@
   "name": "robbot",
   "private": true,
   "version": "2.0.0",
-  "description": "RobBot, a microservice based full stack discord bot utilizing technologies like Redis, MongoDB and RabbitMQ",
+  "description": "RobBot, a microservice based full stack discord bot utilizing technologies like Redis, MongoDB, RabbitMQ and Docker",
   "scripts": {
     "build": "turbo run build",
     "lint": "turbo run lint",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "prune:gateway": "turbo prune --scope=gateway --docker && cp .dockerignore out"
   },
   "repository": {
     "type": "git",
@@ -25,25 +26,5 @@
   "bugs": {
     "url": "https://github.com/RobbotDiscord/RobBot/issues"
   },
-  "homepage": "https://github.com/RobbotDiscord/RobBot#readme",
-  "turbo": {
-    "baseBranch": "origin/main",
-    "pipeline": {
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "outputs": ["dist/**"]
-      },
-      "test": {
-        "dependsOn": [
-          "build"
-        ],
-        "outputs": []
-      },
-      "lint": {
-        "outputs": []
-      }
-    }
-  }
+  "homepage": "https://github.com/RobbotDiscord/RobBot#readme"
 }

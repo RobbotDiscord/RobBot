@@ -1,5 +1,5 @@
 import { Client } from "cloudstorm";
-import { ConfigClient, DotenvConfigEngine } from "config";
+import { ConfigClient, DotenvConfigEngine } from "config-robbot";
 import { AmqpWrapperConnection } from "amqp-wrapper";
 import debugModule from "debug";
 
@@ -24,8 +24,11 @@ class GatewayClient extends Client {
     }
 
     public async start() {
+        const sender = await this.amqpWrapper.initSender({});
+
         super.on("event", async (event) => {
             log("%O", event);
+            sender.send({body: event});
         });
     }
 }

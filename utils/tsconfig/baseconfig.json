@@ -11,7 +11,8 @@
         "strictPropertyInitialization": true,
         "pretty": true,
         "removeComments": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "strict": true
     },
     "display": "Base"
 }

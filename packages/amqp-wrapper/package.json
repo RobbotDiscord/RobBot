@@ -12,7 +12,7 @@
   "license": "GPLv3",
   "type": "module",
   "dependencies": {
-    "config": "*",
+    "config-robbot": "*",
     "debug": "^4.3.3",
     "rhea-promise": "^2.1.0"
   },

@@ -21,7 +21,7 @@
   "dependencies": {
     "amqp-wrapper": "*",
     "cloudstorm": "^0.3.2",
-    "config": "*",
+    "config-robbot": "*",
     "debug": "^4.3.3",
     "rhea-promise": "^2.1.0"
   }
