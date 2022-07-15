@@ -5,7 +5,7 @@
             "path": ".."
         },
         {
-            "name": "🚀gateway",
+            "name": "🚀 gateway",
             "path": "../instances/gateway"
         },
         {
@@ -26,7 +26,7 @@
         }
     ],
     "settings": {
-        "monorepoWorkspace.folders.prefix.unknown": "🚀"
+        "monorepoWorkspace.folders.regex.apps": "^app|web|api|frontend|backend|instances"
     },
     "extensions": {
         "recommendations": ["dbaeumer.vscode-eslint", "eamodio.gitlens", "ms-azuretools.vscode-docker", "folke.vscode-monorepo-workspace"]
