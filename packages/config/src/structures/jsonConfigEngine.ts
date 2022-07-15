@@ -1,5 +1,5 @@
-import { ConfigData, /* Promisifiable, Scope */ } from "../others";
-import { BaseConfigEngine } from "./baseConfigEngine";
+import { ConfigData, /* Promisifiable, Scope */ } from "../others.js";
+import { BaseConfigEngine } from "./baseConfigEngine.js";
 
 class JSONConfigEngine extends BaseConfigEngine {
     public ready = false;

@@ -1,7 +1,7 @@
-import { BaseConfigEngine } from "./structures/baseConfigEngine";
-import { Scope, ConfigData, Driver } from "./others";
-import DotenvConfigEngine  from "./structures/dotenvConfigEngine";
-import { ConfigClient } from "./api";
+import { BaseConfigEngine } from "./structures/baseConfigEngine.js";
+import { Scope, ConfigData, Driver } from "./others.js";
+import DotenvConfigEngine  from "./structures/dotenvConfigEngine.js";
+import { ConfigClient } from "./api.js";
 
 export {
     BaseConfigEngine,
@@ -12,4 +12,4 @@ export {
     ConfigClient
 };
 
-export default exports as typeof import("./index"); // According to PapiOphidian: THIS ACTUALLY WORKS AND IS FUCKING CURSED
+// export default exports as typeof import("./index.js"); // According to PapiOphidian: THIS ACTUALLY WORKS AND IS FUCKING CURSED

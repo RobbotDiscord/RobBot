@@ -1,4 +1,4 @@
-import { Scope, Promisifiable, ConfigData } from "../others";
+import { Scope, Promisifiable, ConfigData } from "../others.js";
 
 abstract class BaseConfigEngine {
     public abstract ready: boolean;

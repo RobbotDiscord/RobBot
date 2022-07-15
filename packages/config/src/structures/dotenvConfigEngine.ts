@@ -1,6 +1,6 @@
-import { BaseConfigEngine } from "./baseConfigEngine";
+import { BaseConfigEngine } from "./baseConfigEngine.js";
 import { parse } from "dotenv";
-import { ConfigData } from "../others";
+import { ConfigData } from "../others.js";
 import { readFileSync, PathLike } from "node:fs";
 
 type RecursiveStringRecord = { [key: string]: string | RecursiveStringRecord };

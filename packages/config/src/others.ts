@@ -1,5 +1,5 @@
-import { BaseConfigEngine } from "./structures/baseConfigEngine";
-import { IClientOptions } from "cloudstorm/dist/Types";
+import { BaseConfigEngine } from "./structures/baseConfigEngine.js";
+import { IClientOptions } from "cloudstorm/dist/Types.js";
 import { ConnectionOptions } from "rhea-promise";
 
 enum Scope {

@@ -1,36 +1,5 @@
 # syntax=docker/dockerfile:1
-# With intended build context to be the pruned out dir by turborepo with --docker
-# FROM node:18-bullseye AS builder
 
-# RUN npm install -g yarn
-
-# WORKDIR /app
-
-# COPY ./json ./
-# COPY yarn.lock ./
-
-# RUN yarn
-
-# COPY ./full ./
-
-# RUN yarn run lint && yarn run build
-
-
-
-# FROM node:18-bullseye AS runner
-
-# RUN npm install -g yarn
-
-# WORKDIR /app
-
-# COPY ./json ./
-# COPY yarn.lock ./
-
-# RUN yarn
-
-# COPY --from=builder /app/**/dist .
-
-# CMD ["node", "instances/gateway/GatewayClient.js"]
 # This will copy the whole project context, upload it to the daemon and then use yarn to install turbo and then prune away to the scoped gateway
 FROM node:18-bullseye AS builder
 # Set working directory

@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "turbo run build",
+    "build:gateway": "turbo run build --scope=gateway",
+    "build:config-rb": "turbo run build --scope=config-rb",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "prune:gateway": "turbo prune --scope=gateway --docker",

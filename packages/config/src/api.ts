@@ -1,4 +1,4 @@
-import { Driver, Scope, DriverReadyError, ConfigData, ConfigClientInitError } from "./others";
+import { Driver, Scope, DriverReadyError, ConfigData, ConfigClientInitError } from "./others.js";
 
 class ConfigClient {
     protected driver: Driver;
