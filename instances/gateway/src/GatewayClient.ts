@@ -1,5 +1,5 @@
 import { Client } from "cloudstorm";
-import { ConfigClient, DotenvConfigEngine } from "config-rb";
+import { ConfigClient, DotenvConfigEngine, Scope } from "config-rb";
 import { AmqpWrapperConnection } from "amqp-wrapper";
 import debugModule from "debug";
 
@@ -11,7 +11,6 @@ class GatewayClient extends Client {
     private amqpWrapper: AmqpWrapperConnection;
 
     constructor(configClient: ConfigClient, amqpWrapper: AmqpWrapperConnection) {
-        configClient.initialize("gateway");
         if (configClient.data["common"]?.token === undefined) {
             throw new Error("Token hasn't been defined");
         }
@@ -35,6 +34,7 @@ class GatewayClient extends Client {
 
 const dotenvConfigEngine = new DotenvConfigEngine("/etc/robbot.env");
 const configClient = new ConfigClient(dotenvConfigEngine);
+configClient.initialize(Scope.GATEWAY);
 const amqpWrapper = new AmqpWrapperConnection(configClient);
 const gatewayClient = new GatewayClient(configClient, amqpWrapper);
 

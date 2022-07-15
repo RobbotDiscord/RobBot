@@ -2,7 +2,12 @@ import { BaseConfigEngine } from "./structures/baseConfigEngine";
 import { IClientOptions } from "cloudstorm/dist/Types";
 import { ConnectionOptions } from "rhea-promise";
 
-type Scope = "gateway" | "executor" | "cache" | "manager";
+enum Scope {
+    MANAGER = "manager",
+    EXECUTOR = "executor",
+    CACHE = "cache",
+    GATEWAY = "gateway",
+}
 
 interface Driver extends BaseConfigEngine {}
 
