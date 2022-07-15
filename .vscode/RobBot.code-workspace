@@ -1,0 +1,34 @@
+{
+    "folders": [
+        {
+            "name": "✨ robbot",
+            "path": ".."
+        },
+        {
+            "name": "🚀gateway",
+            "path": "../instances/gateway"
+        },
+        {
+            "name": "📦 amqp-wrapper",
+            "path": "../packages/amqp-wrapper"
+        },
+        {
+            "name": "📦 config-rb",
+            "path": "../packages/config"
+        },
+        {
+            "name": "⚙️ eslint-config-rb",
+            "path": "../utils/eslintconfig"
+        },
+        {
+            "name": "⚙️ tsconfig-rb",
+            "path": "../utils/tsconfig"
+        }
+    ],
+    "settings": {
+        "monorepoWorkspace.folders.prefix.unknown": "🚀"
+    },
+    "extensions": {
+        "recommendations": ["dbaeumer.vscode-eslint", "eamodio.gitlens", "ms-azuretools.vscode-docker", "folke.vscode-monorepo-workspace"]
+    },
+}
