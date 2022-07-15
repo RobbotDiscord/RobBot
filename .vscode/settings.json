@@ -1,0 +1,11 @@
+
+{
+  "monorepoWorkspace.folders.regex.apps": "^app|web|api|frontend|backend|instances",
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "eslint.nodePath": ".yarn/sdks",
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}

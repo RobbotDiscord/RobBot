@@ -5,7 +5,7 @@
             "path": ".."
         },
         {
-            "name": "🚀 gateway",
+            "name": "🚀 gateway-rb",
             "path": "../instances/gateway"
         },
         {
@@ -30,7 +30,10 @@
         "search.exclude": {
             "**/.yarn": true,
             "**/.pnp.*": true
-        }
+        },
+        "eslint.nodePath": ".yarn/sdks",
+        "typescript.tsdk": "✨ robbot/.yarn/sdks/typescript/lib",
+        "typescript.enablePromptUseWorkspaceTsdk": true
     },
     "extensions": {
         "recommendations": ["dbaeumer.vscode-eslint", "eamodio.gitlens", "ms-azuretools.vscode-docker", "folke.vscode-monorepo-workspace", "arcanis.vscode-zipfs"]

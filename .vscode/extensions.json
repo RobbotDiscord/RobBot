@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint", 
+    "eamodio.gitlens", 
+    "ms-azuretools.vscode-docker", 
+    "folke.vscode-monorepo-workspace", 
+    "arcanis.vscode-zipfs"
+  ]
+}
