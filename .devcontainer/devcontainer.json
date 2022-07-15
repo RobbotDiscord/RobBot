@@ -21,9 +21,17 @@
 				"dbaeumer.vscode-eslint", 
 				"eamodio.gitlens", 
 				"ms-azuretools.vscode-docker", 
-				"folke.vscode-monorepo-workspace"
+				"folke.vscode-monorepo-workspace",
+				"arcanis.vscode-zipfs"
 			]
 		}
+	},
+	"settings": {
+		"monorepoWorkspace.folders.regex.apps": "^app|web|api|frontend|backend|instances",
+        "search.exclude": {
+            "**/.yarn": true,
+            "**/.pnp.*": true
+        }
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

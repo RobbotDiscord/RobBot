@@ -26,9 +26,13 @@
         }
     ],
     "settings": {
-        "monorepoWorkspace.folders.regex.apps": "^app|web|api|frontend|backend|instances"
+        "monorepoWorkspace.folders.regex.apps": "^app|web|api|frontend|backend|instances",
+        "search.exclude": {
+            "**/.yarn": true,
+            "**/.pnp.*": true
+        }
     },
     "extensions": {
-        "recommendations": ["dbaeumer.vscode-eslint", "eamodio.gitlens", "ms-azuretools.vscode-docker", "folke.vscode-monorepo-workspace"]
+        "recommendations": ["dbaeumer.vscode-eslint", "eamodio.gitlens", "ms-azuretools.vscode-docker", "folke.vscode-monorepo-workspace", "arcanis.vscode-zipfs"]
     },
 }
