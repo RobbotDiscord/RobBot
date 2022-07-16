@@ -12,11 +12,12 @@ class JSONConfigEngine extends BaseConfigEngine {
         this.watchPath; // TEMP
     }
 
-    public initialize(): void {
+    public async initialize(): Promise<ConfigData> {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         // const json = import(this.watchPath, { assert: { type: "json" }});
         // this.data = json;
+        return {};
     }
 
     public async refreshConfig(): Promise<ConfigData> {

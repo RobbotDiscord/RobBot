@@ -370,9 +370,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cache@workspace:instances/cache":
+"cache-rb@workspace:instances/cache":
   version: 0.0.0-use.local
-  resolution: "cache@workspace:instances/cache"
+  resolution: "cache-rb@workspace:instances/cache"
   languageName: unknown
   linkType: soft
 
@@ -445,6 +445,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "config-rb@workspace:packages/config"
   dependencies:
+    "@types/debug": ^4.1.7
     "@types/node": ^18.0.4
     "@typescript-eslint/eslint-plugin": ^5.30.6
     "@typescript-eslint/parser": ^5.30.6
@@ -704,9 +705,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"executor@workspace:instances/executor":
+"executor-rb@workspace:instances/executor":
   version: 0.0.0-use.local
-  resolution: "executor@workspace:instances/executor"
+  resolution: "executor-rb@workspace:instances/executor"
   languageName: unknown
   linkType: soft
 

@@ -8,7 +8,6 @@ type RecursiveStringRecord = { [key: string]: string | RecursiveStringRecord };
 class DotenvConfigEngine extends BaseConfigEngine {
     public ready = false;
     private watchPath: PathLike;
-    private data: ConfigData = {};
 
     constructor(path: PathLike) {
         super();
@@ -39,14 +38,13 @@ class DotenvConfigEngine extends BaseConfigEngine {
         return result;
     }
 
-    public initialize(): void {
-        const result = readFileSync(this.watchPath, {
-            flag: "r"
-        });
-        const parsed = parse(result);
+    public async initialize(): Promise<ConfigData> {
+        const dataParsed = await this.refreshConfig();
+        console.error(dataParsed);
 
-        this.data = this.parseData(parsed);
         this.ready = true;
+
+        return dataParsed;
     }
 
     public async refreshConfig(): Promise<ConfigData> {
@@ -54,9 +52,8 @@ class DotenvConfigEngine extends BaseConfigEngine {
             flag: "r"
         });
         const parsed = parse(result);
-
-        this.data = this.parseData(parsed);
-        return this.data;
+        
+        return this.parseData(parsed); 
     }
 }
 

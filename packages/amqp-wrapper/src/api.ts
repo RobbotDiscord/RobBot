@@ -3,7 +3,7 @@ import { Connection, ReceiverOptions, SenderOptions, ConnectionEvents, SenderEve
 import debugModule from "debug";
 
 const log = debugModule("amqp-wrapper:log");
-log.log = console.log.bind(console);
+log.log = console.log.bind(console); // Bind to stdout instead of stderr
 const logConnection = log.extend("connection");
 const logSender = log.extend("sender");
 const logReceiver = log.extend("receiver");
@@ -60,4 +60,4 @@ class AmqpWrapperConnection extends Connection {
     }
 }
 
-export { AmqpWrapperConnection };
+export { AmqpWrapperConnection, log, error };

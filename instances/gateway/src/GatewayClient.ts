@@ -1,6 +1,6 @@
 import { Client } from "cloudstorm";
 import { ConfigClient, DotenvConfigEngine, Scope } from "config-rb";
-import { AmqpWrapperConnection } from "amqp-wrapper";
+import { AmqpWrapperConnection } from "amqp-wrapper-rb";
 import debugModule from "debug";
 
 const log = debugModule("gateway:log");
@@ -34,7 +34,9 @@ class GatewayClient extends Client {
 
 const dotenvConfigEngine = new DotenvConfigEngine("/etc/robbot.env");
 const configClient = new ConfigClient(dotenvConfigEngine);
-configClient.initialize(Scope.GATEWAY);
+await configClient.initialize(Scope.GATEWAY);
+log("Config turned out to be\n%O", configClient.data);
+console.error(configClient.data);
 const amqpWrapper = new AmqpWrapperConnection(configClient);
 const gatewayClient = new GatewayClient(configClient, amqpWrapper);
 

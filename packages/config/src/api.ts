@@ -1,4 +1,9 @@
 import { Driver, Scope, DriverReadyError, ConfigData, ConfigClientInitError } from "./others.js";
+import debugModule from "debug";
+
+const log = debugModule("config:log");
+log.log = console.log.bind(console);
+const error = debugModule("config:error");
 
 class ConfigClient {
     protected driver: Driver;
@@ -20,9 +25,9 @@ class ConfigClient {
         this.data = await result;
     }
 
-    public initialize(scope: Scope) {
+    public async initialize(scope: Scope) {
         try {
-            this.driver.initialize(scope);
+            this.data = await this.driver.initialize(scope);
         } catch (error) {
             throw new ConfigClientInitError(this.driver, (error as Error).message ?? undefined);
         }
@@ -30,4 +35,4 @@ class ConfigClient {
 }
 
 
-export { ConfigClient };
+export { ConfigClient, log, error };
