@@ -6,12 +6,12 @@
   "type": "module",
   "scripts": {
     "build": "turbo run build",
-    "build:gateway": "turbo run build --scope=gateway",
+    "build:gateway-rb": "turbo run build --scope=gateway-rb",
     "build:config-rb": "turbo run build --scope=config-rb",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "prune:gateway": "turbo prune --scope=gateway --docker",
-    "start:gateway": "turbo run start --scope=gateway"
+    "prune:gateway-rb": "turbo prune --scope=gateway-rb --docker",
+    "start:gateway-rb": "turbo run start --scope=gateway-rb"
   },
   "repository": {
     "type": "git",
