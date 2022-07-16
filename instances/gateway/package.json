@@ -1,5 +1,5 @@
 {
-  "name": "gateway",
+  "name": "gateway-rb",
   "private": true,
   "version": "1.0.0",
   "main": "dist/GatewayClient.js",
@@ -7,24 +7,26 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint src/**/*.ts",
-    "start": "node ."
+    "start": "node dist/GatewayClient.js"
   },
   "author": "robigan",
   "license": "GPLv3",
   "type": "module",
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
     "@types/debug": "^4.1.7",
+    "@types/node": "^18.0.4",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "eslint": "^8.19.0",
-    "eslint-config-rb": "*",
-    "tsconfig-rb": "*",
+    "eslint-config-rb": "workspace:*",
+    "tsconfig-rb": "workspace:*",
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "amqp-wrapper": "*",
+    "amqp-wrapper": "workspace:*",
     "cloudstorm": "^0.5.4",
-    "config-rb": "*",
+    "config-rb": "workspace:*",
     "debug": "^4.3.4",
     "rhea-promise": "^2.1.0"
   }
