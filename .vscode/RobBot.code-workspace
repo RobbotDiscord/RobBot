@@ -5,14 +5,6 @@
             "path": ".."
         },
         {
-            "name": "🚀 cache-rb",
-            "path": "../instances/cache"
-        },
-        {
-            "name": "🚀 executor-rb",
-            "path": "../instances/executor"
-        },
-        {
             "name": "🚀 gateway-rb",
             "path": "../instances/gateway"
         },
@@ -21,7 +13,7 @@
             "path": "../packages/amqp-wrapper"
         },
         {
-            "name": "📦 config-rb",
+            "name": "📦 config",
             "path": "../packages/config"
         },
         {

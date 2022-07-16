@@ -9,6 +9,7 @@ enum Scope {
     GATEWAY = "gateway",
 }
 
+// Meta interfaces for building on top of the default, such that the parent/container can use those configuration options
 interface Driver extends BaseConfigEngine {}
 
 type Promisifiable<T> = T | Promise<T>;

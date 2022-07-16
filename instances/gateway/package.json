@@ -18,14 +18,14 @@
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "eslint": "^8.19.0",
-    "eslint-config-rb": "workspace:^",
-    "tsconfig-rb": "workspace:^",
+    "eslint-config": "workspace:^",
+    "tsconfig": "workspace:^",
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "amqp-wrapper-rb": "workspace:^",
+    "amqp-wrapper": "workspace:^",
     "cloudstorm": "^0.5.4",
-    "config-rb": "workspace:^",
+    "config": "workspace:^",
     "debug": "^4.3.4",
     "rhea-promise": "^2.1.0"
   }

@@ -1,4 +1,4 @@
-import { ConfigClient } from "config-rb";
+import { ConfigClient } from "config";
 import { Connection, ReceiverOptions, SenderOptions, ConnectionEvents, SenderEvents, ReceiverEvents } from "rhea-promise";
 import debugModule from "debug";
 
@@ -13,28 +13,32 @@ const errorSender = error.extend("sender");
 const errorReceiver = error.extend("receiver");
 debugModule.enable("amqp-wrapper:error:*");
 
-class AmqpWrapperConnection extends Connection {
+class AmqpWrapperConnection {
     // private configClient: ConfigClient;
+    private _connection: Connection;
 
     constructor(configClient: ConfigClient) {
-        super(configClient.data.amqp);
-        // this.configClient = configClient;
+        this._connection = new Connection(configClient.data.amqp);
 
-        super.on(ConnectionEvents.connectionError, async (context) => {
+        this._connection.on(ConnectionEvents.connectionError, async (context) => {
             errorConnection("Connection error\n%j", context.error ?? {"message": "No error obj provided"});
         });
 
-        super.on(ConnectionEvents.connectionClose, async () => {
+        this._connection.on(ConnectionEvents.connectionClose, async () => {
             logConnection("Connection closed");
         });
     }
 
+    public get connection(): Connection {
+        return this._connection;
+    }
+
     public async start() {
-        await super.open();
+        await this._connection.open();
     }
 
     public async initSender(senderOptions: SenderOptions) {
-        const sender = await super.createSender(senderOptions);
+        const sender = await this._connection.createSender(senderOptions);
 
         sender.on(SenderEvents.senderError, async (context) => {
             errorSender("Sender error\n%j", context.error ?? {"message": "No error obj provided"});
@@ -47,7 +51,7 @@ class AmqpWrapperConnection extends Connection {
     }
 
     public async initReceiver(receiverOptions: ReceiverOptions) {
-        const receiver = await super.createReceiver(receiverOptions);
+        const receiver = await this._connection.createReceiver(receiverOptions);
 
         receiver.on(ReceiverEvents.receiverError, async (context) => {
             errorReceiver("Receiver error\n%j", context.error ?? {"message": "No error obj provided"});

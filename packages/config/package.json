@@ -1,5 +1,5 @@
 {
-  "name": "config-rb",
+  "name": "config",
   "private": true,
   "version": "1.1.0",
   "main": "dist/index.js",
@@ -18,8 +18,8 @@
     "@typescript-eslint/parser": "^5.30.6",
     "cloudstorm": "^0.5.4",
     "eslint": "^8.19.0",
-    "eslint-config-rb": "workspace:^",
-    "tsconfig-rb": "workspace:^",
+    "eslint-config": "workspace:^",
+    "tsconfig": "workspace:^",
     "typescript": "^4.7.4"
   },
   "dependencies": {

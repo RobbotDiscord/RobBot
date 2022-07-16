@@ -1,6 +1,6 @@
 import { Client } from "cloudstorm";
-import { ConfigClient, DotenvConfigEngine, Scope } from "config-rb";
-import { AmqpWrapperConnection } from "amqp-wrapper-rb";
+import { ConfigClient, DotenvConfigEngine, Scope } from "config";
+import { AmqpWrapperConnection } from "amqp-wrapper";
 import debugModule from "debug";
 
 const log = debugModule("gateway:log");

@@ -1,6 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
-    "extends": "tsconfig-rb/packagesconfig.json",
+    "extends": "tsconfig/packagesconfig.json",
     "compilerOptions": {
         "outDir": "dist"
     },

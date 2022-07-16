@@ -6,7 +6,7 @@
   "scripts": {
     "build": "turbo run build",
     "build:gateway-rb": "turbo run build --scope=gateway-rb",
-    "build:config-rb": "turbo run build --scope=config-rb",
+    "build:config": "turbo run build --scope=config",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "prune:gateway-rb": "turbo prune --scope=gateway-rb --docker",
