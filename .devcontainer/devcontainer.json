@@ -12,6 +12,10 @@
 		}
 	},
 
+	"mounts": [
+		"source=${localWorkspaceFolder}/.env.local,target=/etc/robbot.env,type=bind,consistency=cached"
+	],
+
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -26,13 +30,7 @@
 			]
 		}
 	},
-	"settings": {
-		"monorepoWorkspace.folders.regex.apps": "^app|web|api|frontend|backend|instances",
-        "search.exclude": {
-            "**/.yarn": true,
-            "**/.pnp.*": true
-        }
-	},
+	"settings": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

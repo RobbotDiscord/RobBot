@@ -36,7 +36,7 @@ class DriverReadyError extends Error {
 class ConfigClientInitError extends Error {
     constructor(driver: Driver, message = "") {
         // eslint-disable-next-line no-extra-boolean-cast
-        super(`The Config API tried to initialize the driver ${driver.constructor.name} but it produced an error${!!message ? "\n" + message : ""}`);
+        super(`The Config API tried to initialize the driver ${driver.constructor.name} but it produced the following error${!!message ? "\n" + message : ""}`);
     }
 }
 
