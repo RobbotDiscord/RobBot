@@ -3,7 +3,6 @@
   "private": true,
   "version": "2.0.0",
   "description": "RobBot, a microservice based full stack discord bot utilizing technologies like Redis, MongoDB, RabbitMQ and Docker",
-  "type": "module",
   "scripts": {
     "build": "turbo run build",
     "build:gateway-rb": "turbo run build --scope=gateway-rb",
