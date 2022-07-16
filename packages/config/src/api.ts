@@ -16,7 +16,7 @@ class ConfigClient {
     /**
      * Getter for data, to prevent with tampering and to assure driver ready status
      */
-    get data(): ConfigData {
+    public get data(): ConfigData {
         this.driverReady();
         return this._data;
     }

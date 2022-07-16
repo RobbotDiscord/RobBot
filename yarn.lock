@@ -300,6 +300,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "amqp-wrapper@workspace:packages/amqp-wrapper"
   dependencies:
+    "@rushstack/eslint-patch": ^1.1.4
     "@types/debug": ^4.1.7
     "@types/node": ^18.0.4
     "@typescript-eslint/eslint-plugin": ^5.30.6
@@ -307,7 +308,7 @@ __metadata:
     config: "workspace:^"
     debug: ^4.3.4
     eslint: ^8.19.0
-    eslint-config: "workspace:^"
+    eslint-config-robbot: "workspace:^"
     rhea-promise: ^2.1.0
     tsconfig: "workspace:^"
     typescript: ^4.7.4
@@ -452,6 +453,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "config@workspace:packages/config"
   dependencies:
+    "@rushstack/eslint-patch": ^1.1.4
     "@types/debug": ^4.1.7
     "@types/node": ^18.0.4
     "@typescript-eslint/eslint-plugin": ^5.30.6
@@ -460,7 +462,7 @@ __metadata:
     debug: ^4.3.4
     dotenv: ^16.0.1
     eslint: ^8.19.0
-    eslint-config: "workspace:^"
+    eslint-config-robbot: "workspace:^"
     rhea-promise: ^2.1.0
     tsconfig: "workspace:^"
     typescript: ^4.7.4
@@ -564,9 +566,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config@workspace:^, eslint-config@workspace:utils/eslintconfig":
+"eslint-config-robbot@workspace:^, eslint-config-robbot@workspace:utils/eslintconfig":
   version: 0.0.0-use.local
-  resolution: "eslint-config@workspace:utils/eslintconfig"
+  resolution: "eslint-config-robbot@workspace:utils/eslintconfig"
   peerDependencies:
     eslint: ^8.5.0
   languageName: unknown
@@ -835,7 +837,7 @@ __metadata:
     config: "workspace:^"
     debug: ^4.3.4
     eslint: ^8.19.0
-    eslint-config: "workspace:^"
+    eslint-config-robbot: "workspace:^"
     rhea-promise: ^2.1.0
     tsconfig: "workspace:^"
     typescript: ^4.7.4
