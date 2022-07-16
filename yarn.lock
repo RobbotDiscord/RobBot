@@ -135,6 +135,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^18.0.5":
+  version: 18.0.5
+  resolution: "@types/node@npm:18.0.5"
+  checksum: cc9c67d0074252f798d226dd95a22e0e8851cf7fc623ef4a603d9ad2c2b46650f930147062ea33719008b1de67f08f499ad693307d02f8396e6f1fead8144329
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/eslint-plugin@npm:^5.30.6":
   version: 5.30.6
   resolution: "@typescript-eslint/eslint-plugin@npm:5.30.6"
@@ -282,20 +289,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"amqp-wrapper@workspace:*, amqp-wrapper@workspace:packages/amqp-wrapper":
+"amqp-wrapper-rb@workspace:^, amqp-wrapper-rb@workspace:packages/amqp-wrapper":
   version: 0.0.0-use.local
-  resolution: "amqp-wrapper@workspace:packages/amqp-wrapper"
+  resolution: "amqp-wrapper-rb@workspace:packages/amqp-wrapper"
   dependencies:
     "@types/debug": ^4.1.7
     "@types/node": ^18.0.4
     "@typescript-eslint/eslint-plugin": ^5.30.6
     "@typescript-eslint/parser": ^5.30.6
-    config-rb: "workspace:*"
+    config-rb: "workspace:^"
     debug: ^4.3.4
     eslint: ^8.19.0
-    eslint-config-rb: "workspace:*"
+    eslint-config-rb: "workspace:^"
     rhea-promise: ^2.1.0
-    tsconfig-rb: "workspace:*"
+    tsconfig-rb: "workspace:^"
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
@@ -434,7 +441,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"config-rb@workspace:*, config-rb@workspace:packages/config":
+"config-rb@workspace:^, config-rb@workspace:packages/config":
   version: 0.0.0-use.local
   resolution: "config-rb@workspace:packages/config"
   dependencies:
@@ -445,9 +452,9 @@ __metadata:
     debug: ^4.3.4
     dotenv: ^16.0.1
     eslint: ^8.19.0
-    eslint-config-rb: "workspace:*"
+    eslint-config-rb: "workspace:^"
     rhea-promise: ^2.1.0
-    tsconfig-rb: "workspace:*"
+    tsconfig-rb: "workspace:^"
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
@@ -549,7 +556,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-rb@workspace:*, eslint-config-rb@workspace:utils/eslintconfig":
+"eslint-config-rb@workspace:^, eslint-config-rb@workspace:utils/eslintconfig":
   version: 0.0.0-use.local
   resolution: "eslint-config-rb@workspace:utils/eslintconfig"
   peerDependencies:
@@ -811,17 +818,17 @@ __metadata:
   resolution: "gateway-rb@workspace:instances/gateway"
   dependencies:
     "@types/debug": ^4.1.7
-    "@types/node": ^18.0.4
+    "@types/node": ^18.0.5
     "@typescript-eslint/eslint-plugin": ^5.30.6
     "@typescript-eslint/parser": ^5.30.6
-    amqp-wrapper: "workspace:*"
+    amqp-wrapper-rb: "workspace:^"
     cloudstorm: ^0.5.4
-    config-rb: "workspace:*"
+    config-rb: "workspace:^"
     debug: ^4.3.4
     eslint: ^8.19.0
-    eslint-config-rb: "workspace:*"
+    eslint-config-rb: "workspace:^"
     rhea-promise: ^2.1.0
-    tsconfig-rb: "workspace:*"
+    tsconfig-rb: "workspace:^"
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
@@ -1321,7 +1328,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig-rb@workspace:*, tsconfig-rb@workspace:utils/tsconfig":
+"tsconfig-rb@workspace:^, tsconfig-rb@workspace:utils/tsconfig":
   version: 0.0.0-use.local
   resolution: "tsconfig-rb@workspace:utils/tsconfig"
   dependencies:

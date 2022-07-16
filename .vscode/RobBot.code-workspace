@@ -5,11 +5,19 @@
             "path": ".."
         },
         {
+            "name": "🚀 cache-rb",
+            "path": "../instances/cache"
+        },
+        {
+            "name": "🚀 executor-rb",
+            "path": "../instances/executor"
+        },
+        {
             "name": "🚀 gateway-rb",
             "path": "../instances/gateway"
         },
         {
-            "name": "📦 amqp-wrapper",
+            "name": "📦 amqp-wrapper-rb",
             "path": "../packages/amqp-wrapper"
         },
         {

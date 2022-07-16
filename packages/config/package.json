@@ -17,8 +17,8 @@
     "@typescript-eslint/parser": "^5.30.6",
     "cloudstorm": "^0.5.4",
     "eslint": "^8.19.0",
-    "eslint-config-rb": "workspace:*",
-    "tsconfig-rb": "workspace:*",
+    "eslint-config-rb": "workspace:^",
+    "tsconfig-rb": "workspace:^",
     "typescript": "^4.7.4"
   },
   "dependencies": {
