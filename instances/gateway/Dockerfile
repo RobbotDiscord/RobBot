@@ -6,7 +6,7 @@ FROM node:18-bullseye AS builder
 WORKDIR /app
 RUN yarn global add turbo
 COPY . .
-RUN yarn run prune:gateway-rb
+RUN yarn run prune:gateway
 
 # Then copy the relevant lockfile and package.json(s), then proceed to imstall dependencies
 FROM node:18-bullseye AS installer
@@ -21,5 +21,5 @@ WORKDIR /app
 COPY --from=installer /app/ .
 COPY --from=builder /app/out/full/ .
 # COPY .gitignore .gitignore
-RUN npx turbo run lint build test --scope=gateway-rb --include-dependencies --no-deps
-ENTRYPOINT [ "yarn", "run", "start:gateway-rb" ]
+RUN npx turbo run lint build test --scope=gateway --include-dependencies --no-deps
+ENTRYPOINT [ "yarn", "run", "start:gateway" ]

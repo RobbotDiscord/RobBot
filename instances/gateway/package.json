@@ -1,5 +1,5 @@
 {
-  "name": "gateway-rb",
+  "name": "gateway",
   "private": true,
   "version": "1.0.0",
   "main": "dist/GatewayClient.js",
