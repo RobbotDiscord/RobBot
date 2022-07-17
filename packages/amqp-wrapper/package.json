@@ -17,7 +17,6 @@
     "rhea-promise": "^2.1.0"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.1.4",
     "@types/debug": "^4.1.7",
     "@types/node": "^18.0.4",
     "@typescript-eslint/eslint-plugin": "^5.30.6",

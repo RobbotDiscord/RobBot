@@ -67,13 +67,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rushstack/eslint-patch@npm:^1.1.4":
-  version: 1.1.4
-  resolution: "@rushstack/eslint-patch@npm:1.1.4"
-  checksum: 597bc84e2f76c7f5f2bcedd4c4b1dd5d02524167a0f67ac588e8fbbd94666297aaf0e6a53ec46afb95554164fc1169ff782841003280e4bc98e80ab6559412c6
-  languageName: node
-  linkType: hard
-
 "@tsconfig/node18@npm:^1.0.1":
   version: 1.0.1
   resolution: "@tsconfig/node18@npm:1.0.1"
@@ -300,7 +293,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "amqp-wrapper@workspace:packages/amqp-wrapper"
   dependencies:
-    "@rushstack/eslint-patch": ^1.1.4
     "@types/debug": ^4.1.7
     "@types/node": ^18.0.4
     "@typescript-eslint/eslint-plugin": ^5.30.6
@@ -453,7 +445,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "config@workspace:packages/config"
   dependencies:
-    "@rushstack/eslint-patch": ^1.1.4
     "@types/debug": ^4.1.7
     "@types/node": ^18.0.4
     "@typescript-eslint/eslint-plugin": ^5.30.6
@@ -827,7 +818,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gateway@workspace:instances/gateway"
   dependencies:
-    "@rushstack/eslint-patch": ^1.1.4
     "@types/debug": ^4.1.7
     "@types/node": ^18.0.5
     "@typescript-eslint/eslint-plugin": ^5.30.6
