@@ -11,6 +11,7 @@ const error = debugModule("amqp-wrapper:error");
 const errorConnection = error.extend("connection");
 const errorSender = error.extend("sender");
 const errorReceiver = error.extend("receiver");
+debugModule.enable("amqp-wrapper:error");
 debugModule.enable("amqp-wrapper:error:*");
 
 class AmqpWrapperConnection {

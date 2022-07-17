@@ -40,7 +40,6 @@ class DotenvConfigEngine extends BaseConfigEngine {
 
     public async initialize(): Promise<ConfigData> {
         const dataParsed = await this.refreshConfig();
-        console.error(dataParsed);
 
         this.ready = true;
 

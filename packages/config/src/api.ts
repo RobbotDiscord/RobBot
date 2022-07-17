@@ -4,6 +4,8 @@ import debugModule from "debug";
 const log = debugModule("config:log");
 log.log = console.log.bind(console);
 const error = debugModule("config:error");
+debugModule.enable("config:error");
+debugModule.enable("config:error:*");
 
 class ConfigClient {
     protected driver: Driver;
